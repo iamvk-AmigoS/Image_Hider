@@ -33,7 +33,7 @@ def retr(filename):
 				binary = binary + digit
 				if (binary[-16:] == '1111111111111110'):
 					print ("Success")
-					return bin2str(binary[2:-17])
+					return bin2str(binary[:-16])
 		return bin2str(binary)
 	return "Incorrect Image mode, couldn't retrieve"
 	
@@ -47,8 +47,12 @@ def Main():
 	if (options.retr != None):
 		print (retr(options.retr))
 		de = retr(options.retr)
+		print("*****************************************************")
+		print(de)
+		print("*****************************************************")
+		de=de[2:-1]
 		k = pyDes.des(b"DESCRYPT", pyDes.CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=pyDes.PAD_PKCS5)
-		decrypted = str (k.decrypt (de))
+		decrypted = k.decrypt(de)
 		print ("Decrypted: %r" % decrypted)
 	else:
 		print (parser.usage)

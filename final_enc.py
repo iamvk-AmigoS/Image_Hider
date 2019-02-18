@@ -9,7 +9,8 @@ with open("3.jpg", "rb") as imageFile:
     print (str)
 
 k = pyDes.des(b"DESCRYPT", pyDes.CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=pyDes.PAD_PKCS5)
-d = k.encrypt(str)
+encrypted = k.encrypt(str)
+print ("Encrypted: " + repr(encrypted))
 
 def encode(hexcode, digit):
 	if hexcode[-1] in ('0', '1', '2', '3', '4', '5'):
@@ -64,7 +65,7 @@ def Main():
 			
 	(options, args) = parser.parse_args()
 	if (options.hide != None):
-		text = d
+		text = encrypted
 		print (hide(options.hide, text))
 	else:
 		print (parser.usage)

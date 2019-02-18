@@ -15,7 +15,7 @@ def str2bin(message):
 	return binary[2:]
 	
 def bin2str(binary):
-	message = binascii.unhexlify('0%x' % (int('0b' +binary, 2)))
+	message = binascii.unhexlify('%x' % (int('0b' +binary, 2)))
 	return message
 	
 def encode(hexcode, digit):
