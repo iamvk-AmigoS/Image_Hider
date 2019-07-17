@@ -7,4 +7,5 @@ make their applications more secure. But the question arises
 
 E.T.I.S. does the same for you. It takes an vital image of the user and hid it under an trivial image, with no change to the latter one.
 
+:right-point:
 ## Getting Started :closed_lock_with_key:
