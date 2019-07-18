@@ -23,4 +23,5 @@ E.T.I.S uses DES encryption at the back beacuse of its fast encryption rate and 
 
 Following is the flow chart of the encryption in E.T.I.S
 
+The Decryption of the image is followed in the below flow chart
 
