@@ -19,8 +19,7 @@ You need to have python installed on your PC. If you don't, you can install it h
 E.T.I.S. have been compiled in Ubuntu OS using Python3.0 version, so if you are using different configurations make adjustments accordingly. Also make sure the extension of the image should be png.
 
 ### Mechanism of E.T.I.S.
-E.T.I.S uses DES encryption at the back beacuse of its fast encryption rate and requires less memory space. You can read about * [DES here](https://en.wikipedia.org/wiki/Data_Encryption_Standard)
-Consider Image A as an Important image, which need to be hide and Image B as an minor image with no importance.
+E.T.I.S uses DES encryption at the back beacuse of its fast encryption rate and requires less memory space. You can read about [DES here](https://en.wikipedia.org/wiki/Data_Encryption_Standard). Consider Image A as an Important image, which need to be hide and Image B as an minor image with no importance.
 
 Following is the flow chart of the encryption in E.T.I.S
 
