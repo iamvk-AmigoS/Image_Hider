@@ -7,8 +7,8 @@ make their applications more secure. But the question arises
 
 E.T.I.S. does the same for you. It takes an vital image of the user and hid it under an trivial image, with no change to the latter one.
 
-Currently it is only an approach to encrypt your images in the PC, But later on full Android Application will be appended and also anyone is appretiated to implement it by  his own.
+:point_right:Currently it is only an approach to encrypt your images in the PC, But later on full Android Application will be appended                  and also anyone is appretiated to implement it by  his own.
 
 ## Getting Started :closed_lock_with_key:
 
-:point_right:
+
