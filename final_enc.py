@@ -4,13 +4,15 @@ import optparse
 import pyDes
 from PIL import Image
 
-with open("3.jpg", "rb") as imageFile:
+with open("sample.jpg", "rb") as imageFile:			   #//Sample is name of Image A
     str = base64.b64encode(imageFile.read())
-    print (str)
+    #print (str)										//The hex code of the Image A
 
-k = pyDes.des(b"DESCRYPT", pyDes.CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=pyDes.PAD_PKCS5)
+key=input("Enter the Key of 8 characters : ")
+
+k = pyDes.des(key, pyDes.CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=pyDes.PAD_PKCS5)
 encrypted = k.encrypt(str)
-print ("Encrypted: " + repr(encrypted))
+#print ("Encrypted: " + repr(encrypted))				//The encrypted hex code of Image A
 
 def encode(hexcode, digit):
 	if hexcode[-1] in ('0', '1', '2', '3', '4', '5'):

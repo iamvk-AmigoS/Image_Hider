@@ -1,3 +1,0 @@
-f = open("jpg1_b64.txt", "wb")
-f.write(str)
-f.close()

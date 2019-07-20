@@ -45,15 +45,15 @@ def Main():
 			
 	(options, args) = parser.parse_args()
 	if (options.retr != None):
-		print (retr(options.retr))
+		#print (retr(options.retr))		//print the recollected encrypted hex code
 		de = retr(options.retr)
-		print("*****************************************************")
-		print(de)
-		print("*****************************************************")
-		de=de[2:-1]
-		k = pyDes.des(b"DESCRYPT", pyDes.CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=pyDes.PAD_PKCS5)
+		key=input("Enter the Key of 8 characters : ")
+		k = pyDes.des(key, pyDes.CBC, "\0\0\0\0\0\0\0\0", pad=None, padmode=pyDes.PAD_PKCS5)
 		decrypted = k.decrypt(de)
-		print ("Decrypted: %r" % decrypted)
+		#print ("Decrypted: %r" % decrypted)		//print the decrypted hex code
+		fh = open("imageToSave.jpg", "wb")
+		fh.write(decrypted.decode('base64'))
+		fh.close()
 	else:
 		print (parser.usage)
 		exit(0)
