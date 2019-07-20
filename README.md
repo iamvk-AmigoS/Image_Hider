@@ -22,6 +22,7 @@ E.T.I.S. have been compiled in Ubuntu OS using Python3.0 version, so if you are 
 E.T.I.S uses DES encryption at the back beacuse of its fast encryption rate and requires less memory space. You can read about [DES here](https://en.wikipedia.org/wiki/Data_Encryption_Standard). Consider Image A as an Important image, which need to be hide and Image B as an minor image with no importance.
 
 Following is the flow chart of the encryption in E.T.I.S
+python3 final_enc.py -e bunny.png
 
 The Decryption of the image is followed in the below flow chart
-
+python3 final_dec.py -d bunny.png
